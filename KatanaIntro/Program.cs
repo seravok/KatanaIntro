@@ -11,20 +11,20 @@ using System.IO;
 namespace KatanaIntro
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        string uri = "http://localhost:8080";
-    //        using (WebApp.Start<startup>(uri))
-    //        {
-    //            Console.WriteLine("Started!");
-    //            Console.ReadKey();
-    //            Console.WriteLine("Stopping!");
-    //        }
-    //    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string uri = "http://localhost:8080";
+            using (WebApp.Start<startup>(uri))
+            {
+                Console.WriteLine("Started!");
+                Console.ReadKey();
+                Console.WriteLine("Stopping!");
+            }
+        }
 
-    //}
+    }
     public class startup
     {
         public void Configuration(IAppBuilder app)
